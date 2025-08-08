@@ -1,0 +1,131 @@
+/* Base, theme, layout — minimal, hand-rolled. */
+
+/* 1) Variables — default to LIGHT with a neutral sepia. */
+:root {
+  --bg: #f6f3ee;           /* neutral newsprint */
+  --text: #1b1b1b;
+  --muted: #6b6b6b;
+  --link: #174ea6;
+  --rule: rgba(0,0,0,0.12);
+  --focus: #3558c9;
+  --maxw: 72ch;
+}
+
+/* Light theme only - dark theme code kept for future use */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115;
+    --text: #e7e7e7;
+    --muted: #a5a5a5;
+    --link: #82aaff;
+    --rule: rgba(255,255,255,0.12);
+    --focus: #a0b9ff;
+  }
+}
+
+html[data-theme="dark"] {
+  --bg: #0f1115;
+  --text: #e7e7e7;
+  --muted: #a5a5a5;
+  --link: #82aaff;
+  --rule: rgba(255,255,255,0.12);
+  --focus: #a0b9ff;
+}
+*/
+
+/* 2) Base elements */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-serif, Charter, Georgia, "Times New Roman", serif;
+  font-kerning: normal;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-optical-sizing: auto;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+img, svg, video { max-width: 100%; height: auto; }
+
+.container { max-width: var(--maxw); padding: 0 1rem; margin: 0 auto; }
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+  text-decoration-thickness: 0.06em;
+  text-decoration-skip-ink: auto;
+}
+a:hover, a:focus {
+  text-decoration-thickness: 0.08em;
+}
+a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.skip-link {
+  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus { left: 0; top: 0; width: auto; height: auto; padding: .5rem; background: var(--bg); color: var(--text); }
+
+
+/* 3) Home hero: name + horizontal links */
+.home-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 2rem 0 1rem 0;
+}
+.site-title {
+  font-size: clamp(2.25rem, 7vw, 4rem);
+  line-height: 1.05;
+  margin: 0;
+  flex: 0 0 auto;
+}
+.key-links {
+  flex: 1 0 auto;
+}
+.linkgrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.linkgrid a { 
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem); 
+  white-space: nowrap;
+}
+
+/* 5) Sections */
+.sections { padding: 1rem 0 3rem; }
+.section { padding: 1rem 0; }
+.section__title {
+  font-size: 1.25rem;
+  margin: 0 0 .5rem 0;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: .25rem;
+}
+.itemlist {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: .75rem;
+}
+.item__link { font-size: 1.05rem; }
+.item__desc { margin: .25rem 0 0; color: var(--muted); }
+
+/* 6) Post layout */
+.crumb { margin: 1rem 0 0.5rem; }
+.backlink { font-size: .95rem; }
+.post__title { font-size: clamp(1.75rem, 5vw, 2.5rem); margin: .2rem 0 .25rem; }
+.post__meta { color: var(--muted); margin: 0 0 1rem 0; }
+.post__content p { margin: 0 0 1rem 0; }
+.post__content h2, .post__content h3 { margin: 1.5rem 0 .5rem; }
+.post__content img { display: block; margin: 1rem auto; border: 1px solid var(--rule); border-radius: 8px; }
+

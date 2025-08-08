@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<section class="home-hero">
+  <h1 class="site-title">Uzair Qadir</h1>
+
+  <nav class="key-links" aria-label="Key links">
+    <ul class="linkgrid">
+      <li><a href="#" rel="noopener">GitHub</a></li>
+      <li><a href="#" rel="noopener">Résumé</a></li>
+      <li><a href="#" rel="noopener">Substack</a></li>
+    </ul>
+  </nav>
+</section>
+
+<section class="sections">
+  {% for section in site.data.links %}
+  <section class="section">
+    <h2 class="section__title">{{ section[0] }}</h2>
+    <ul class="itemlist">
+      {% for item in section[1] %}
+      <li class="item">
+        <a class="item__link" href="{{ item.url }}"{% if item.url contains '://' %} rel="noopener"{% endif %}>{{ item.title }}</a>
+        {% if item.description %}
+          <p class="item__desc">{{ item.description }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</section>

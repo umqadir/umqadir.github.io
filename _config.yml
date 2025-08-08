@@ -1,0 +1,11 @@
+title: Uzair Qadir
+description: Personal website of Uzair Qadir (placeholder content).
+baseurl: ""  # for user/organization site
+url: "https://uzairqadir.github.io"  # update if/when you add a custom domain
+permalink: /posts/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins: []  # keep empty for GitHub Pages default-safe build
+exclude:
+  - README.md

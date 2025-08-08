@@ -1,0 +1,13 @@
+Writing:
+  - title: "Hello, World"
+    url: /posts/hello-world/
+    description: "A tiny placeholder post to show the format."
+  - title: "External essay (placeholder)"
+    url: https://example.com/essay
+Projects:
+  - title: "Project X (placeholder)"
+    url: /posts/project-x/
+    description: "An example internal link to a post."
+Other Stuff:
+  - title: "Notes (external, placeholder)"
+    url: https://example.com/notes
