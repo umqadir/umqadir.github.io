@@ -2,13 +2,13 @@
 
 /* 1) Variables — default to LIGHT with a neutral sepia. */
 :root {
-  --bg: #f6f3ee;           /* neutral newsprint */
+  --bg: #f2edda;           /* more yellow sepia */
   --text: #1b1b1b;
   --muted: #6b6b6b;
-  --link: #174ea6;
+  --link: #2d2520;
   --rule: rgba(0,0,0,0.12);
-  --focus: #3558c9;
-  --maxw: 72ch;
+  --focus: #8b6914;
+  --maxw: 125ch;
 }
 
 /* Light theme only - dark theme code kept for future use */
@@ -79,6 +79,7 @@ a:focus-visible {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+  justify-content: space-between;
   gap: 2rem;
   padding: 2rem 0 1rem 0;
 }
@@ -87,9 +88,10 @@ a:focus-visible {
   line-height: 1.05;
   margin: 0;
   flex: 0 0 auto;
+  font-weight: normal;
 }
 .key-links {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
 }
 .linkgrid {
   list-style: none;
@@ -110,7 +112,6 @@ a:focus-visible {
 .section__title {
   font-size: 1.25rem;
   margin: 0 0 .5rem 0;
-  border-bottom: 1px solid var(--rule);
   padding-bottom: .25rem;
 }
 .itemlist {
