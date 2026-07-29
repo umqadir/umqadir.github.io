@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uzair Qadir</title>
+  <meta name="description" content="Data scientist at the New York City Council's Oversight & Investigations Division.">
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5f5f5f;
+      --link: #1a4fa0;
+      --rule: rgba(0, 0, 0, 0.12);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14161a;
+        --text: #e8e8e8;
+        --muted: #a3a3a3;
+        --link: #8ab4f8;
+        --rule: rgba(255, 255, 255, 0.15);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 3rem;
+    }
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 650;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    .bio {
+      margin: 0;
+      color: var(--muted);
+    }
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 3rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .work li { margin-bottom: 1.25rem; }
+    .work a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 550;
+    }
+    .work a:hover, .contact a:hover { text-decoration: underline; }
+    .work p {
+      margin: 0.15rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .contact li { margin-bottom: 0.4rem; }
+    .contact a { color: var(--link); text-decoration: none; }
+    a:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Uzair Qadir</h1>
+    <p class="bio">Data scientist at the New York City Council's Oversight &amp; Investigations Division. I build data pipelines, models, and investigations about how New York City actually works.</p>
+
+    <h2>Selected work</h2>
+    <ul class="work">
+      <li>
+        <a href="https://council-discourse.pages.dev">Council Discourse</a>
+        <p>Every NYC Council meeting transcribed with named speakers, chaptered, published within a day.</p>
+      </li>
+      <li>
+        <a href="https://github.com/umqadir/crimerisk">CrimeRisk</a>
+        <p>National block-group-level crime-risk surface built from public data.</p>
+      </li>
+      <li>
+        <a href="https://umqadir.github.io/lobbying-signals">Lobbying Signals</a>
+        <p>Trend detection over all federal lobbying disclosures since 2020.</p>
+      </li>
+      <li>
+        <a href="https://github.com/umqadir/nyc-report-heat">The Hot 100</a>
+        <p>Daily-refreshed ranking of NYC government reports and rules by public attention.</p>
+      </li>
+      <li>
+        <a href="https://github.com/umqadir/nettalk">NETtalk reproduction</a>
+        <p>From-scratch NumPy reproduction of Sejnowski &amp; Rosenberg (1987).</p>
+      </li>
+    </ul>
+
+    <h2>Contact</h2>
+    <ul class="contact">
+      <li><a href="mailto:uzairq93@gmail.com">uzairq93@gmail.com</a></li>
+      <li><a href="https://github.com/umqadir">github.com/umqadir</a></li>
+    </ul>
+  </main>
+</body>
+</html>
